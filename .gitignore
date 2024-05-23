@@ -3,3 +3,24 @@
 #########
 
 .DS_Store
+
+#########
+# Swift #
+#########
+
+Package.resolved
+/.build
+
+#########
+# Xcode #
+#########
+
+DerivedData/
+xcuserdata/
+.swiftpm/xcode/package.xcworkspace
+
+######################
+# Visual Studio Code #
+######################
+
+/.vscode
