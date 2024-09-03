@@ -6,7 +6,6 @@
 #if os(macOS)
     public import CoreGraphics
     public import SwiftUI
-    fileprivate import AppKit
     fileprivate import os
 
     extension AppKit.NSColor: ColorVaryingSample {

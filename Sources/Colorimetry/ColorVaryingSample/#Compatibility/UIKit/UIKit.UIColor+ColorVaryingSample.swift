@@ -6,7 +6,6 @@
 #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
     public import CoreGraphics
     public import SwiftUI
-    fileprivate import UIKit
     fileprivate import os
 
     extension UIKit.UIColor: ColorVaryingSample {

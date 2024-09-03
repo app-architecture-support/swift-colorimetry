@@ -6,12 +6,6 @@
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
     public import CoreGraphics
     public import SwiftUI
-    #if os(macOS)
-        fileprivate import AppKit
-    #endif
-    #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-        fileprivate import UIKit
-    #endif
 
     @available(macOS 11.0, tvOS 14.0, iOS 14.0, watchOS 7.0, *)
     extension SwiftUI.Color: ColorVaryingSample {

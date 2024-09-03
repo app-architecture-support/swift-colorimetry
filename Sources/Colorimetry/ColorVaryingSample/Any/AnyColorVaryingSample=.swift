@@ -8,14 +8,6 @@
     fileprivate import CoreGraphics
 #endif
 
-#if os(macOS)
-    fileprivate import AppKit
-#endif
-
-#if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    fileprivate import UIKit
-#endif
-
 public struct AnyColorVaryingSample<Sample: ColorSample> {
 
     // MARK: AnyColorVaryingSample - Initialization
