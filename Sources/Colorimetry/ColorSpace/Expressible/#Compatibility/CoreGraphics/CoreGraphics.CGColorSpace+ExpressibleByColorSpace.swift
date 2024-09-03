@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColorSpace
+    public import CoreGraphics
 
     extension ExpressibleByColorSpace
     where Self: CoreGraphics.CGColorSpace {

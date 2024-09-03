@@ -4,20 +4,19 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import class CoreGraphics.CGColorSpace
-    public import class CoreImage.CIColor
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    public import CoreImage
+    fileprivate import os
 
     #if os(macOS)
-        fileprivate import class AppKit.NSColor
+        fileprivate import AppKit
     #endif
 
     #if os(tvOS) || os(iOS) || os(visionOS)
-        fileprivate import class UIKit.UIColor
+        fileprivate import UIKit
     #endif
 
-extension CoreImage.CIColor: ColorSample {
+    extension CoreImage.CIColor: ColorSample {
 
         // MARK: ColorSample - Space
 

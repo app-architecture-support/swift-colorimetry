@@ -4,13 +4,13 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import struct SwiftUI.Color
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    fileprivate import SwiftUI
+    fileprivate import os
 #endif
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(visionOS)
-    public import class CoreImage.CIColor
+    fileprivate import CoreImage
 #endif
 
 public struct OpacitySupportingColorSample<ColorSampleType: ColorSample> {

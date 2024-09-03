@@ -4,7 +4,7 @@
 //
 
 #if os(tvOS) || os(iOS) || os(visionOS)
-    public import class UIKit.UITraitCollection
+    public import UIKit
 
     extension UIKit.UITraitCollection {
 

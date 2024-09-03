@@ -4,7 +4,7 @@
 //
 
 #if os(macOS)
-    public import class AppKit.NSColor
+    public import AppKit
 
     extension ExpressibleByColorVaryingSample
     where Self: AppKit.NSColor {

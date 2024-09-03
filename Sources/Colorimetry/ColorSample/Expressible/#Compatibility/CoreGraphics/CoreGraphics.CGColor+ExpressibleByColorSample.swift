@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
+    public import CoreGraphics
 
     extension ExpressibleByColorSample
     where Self: CoreGraphics.CGColor {

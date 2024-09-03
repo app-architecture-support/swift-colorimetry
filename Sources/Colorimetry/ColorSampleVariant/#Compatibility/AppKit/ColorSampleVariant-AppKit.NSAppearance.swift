@@ -4,8 +4,8 @@
 //
 
 #if os(macOS)
-    public import class AppKit.NSAppearance
-    fileprivate import func os.os_log
+    public import AppKit
+    fileprivate import os
 
     extension AppKit.NSAppearance {
 

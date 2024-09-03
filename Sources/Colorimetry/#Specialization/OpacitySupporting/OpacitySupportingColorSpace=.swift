@@ -4,12 +4,12 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColorSpace
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    fileprivate import os
 #endif
 
 #if os(macOS)
-    public import class AppKit.NSColorSpace
+    public import AppKit
 #endif
 
 public struct OpacitySupportingColorSpace<ColorSpaceType: ColorSpace> {

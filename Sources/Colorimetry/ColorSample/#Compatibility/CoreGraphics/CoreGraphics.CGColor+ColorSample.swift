@@ -4,9 +4,8 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import class CoreGraphics.CGColorSpace
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    fileprivate import os
 
     extension ColorSample
     where Self: CoreGraphics.CGColor {
@@ -18,7 +17,7 @@
         }
     }
 
-extension CoreGraphics.CGColor: ColorSample {
+    extension CoreGraphics.CGColor: ColorSample {
 
         // MARK: ColorSample - Space
 

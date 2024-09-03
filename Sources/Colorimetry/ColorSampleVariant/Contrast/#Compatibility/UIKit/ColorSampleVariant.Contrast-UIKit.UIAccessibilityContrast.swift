@@ -4,7 +4,7 @@
 //
 
 #if os(tvOS) || os(iOS) || os(visionOS)
-    public import enum UIKit.UIAccessibilityContrast
+    public import UIKit
 
     extension ColorSampleVariant.Contrast {
 

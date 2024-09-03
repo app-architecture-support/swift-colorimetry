@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import enum SwiftUI.ColorScheme
+    public import SwiftUI
 
     extension ColorSampleVariant.Lighting {
 

@@ -4,13 +4,10 @@
 //
 
 #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import struct SwiftUI.Color
-    public import class UIKit.UIColor
-    #if os(tvOS) || os(iOS) || os(visionOS)
-        fileprivate import class UIKit.UITraitCollection
-    #endif
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    public import SwiftUI
+    fileprivate import UIKit
+    fileprivate import os
 
     extension UIKit.UIColor: ColorVaryingSample {
 

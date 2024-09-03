@@ -4,8 +4,8 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColorSpace
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    fileprivate import os
 
     extension CoreGraphics.CGColorSpace: ColorSpace {
 

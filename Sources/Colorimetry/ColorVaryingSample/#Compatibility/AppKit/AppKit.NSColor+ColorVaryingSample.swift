@@ -4,11 +4,10 @@
 //
 
 #if os(macOS)
-    public import class CoreGraphics.CGColor
-    public import struct SwiftUI.Color
-    public import class AppKit.NSColor
-    fileprivate import class AppKit.NSAppearance
-    fileprivate import func os.os_log
+    public import CoreGraphics
+    public import SwiftUI
+    fileprivate import AppKit
+    fileprivate import os
 
     extension AppKit.NSColor: ColorVaryingSample {
 

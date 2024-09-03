@@ -4,7 +4,7 @@
 //
 
 #if os(tvOS) || os(iOS) || os(visionOS)
-    public import protocol UIKit.UIMutableTraits
+    public import UIKit
 
     @available(tvOS 17.0, iOS 17.0, *)
     extension UIKit.UIMutableTraits {

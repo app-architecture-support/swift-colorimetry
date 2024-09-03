@@ -4,13 +4,13 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import struct SwiftUI.Color
+    public import CoreGraphics
+    public import SwiftUI
     #if os(macOS)
-        fileprivate import class AppKit.NSColor
+        fileprivate import AppKit
     #endif
     #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-        fileprivate import class UIKit.UIColor
+        fileprivate import UIKit
     #endif
 
     @available(macOS 11.0, tvOS 14.0, iOS 14.0, watchOS 7.0, *)

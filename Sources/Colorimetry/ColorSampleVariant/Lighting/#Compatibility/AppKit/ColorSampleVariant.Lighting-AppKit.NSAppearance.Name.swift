@@ -4,7 +4,7 @@
 //
 
 #if os(macOS)
-    internal import class AppKit.NSAppearance
+    internal import AppKit
 
     extension ColorSampleVariant.Lighting {
 

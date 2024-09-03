@@ -4,17 +4,17 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    fileprivate import class CoreGraphics.CGColor
-    public import struct SwiftUI.Color
-    fileprivate import func os.os_log
+    public import SwiftUI
+    fileprivate import CoreGraphics
+    fileprivate import os
 #endif
 
 #if os(macOS)
-    public import class AppKit.NSColor
+    fileprivate import AppKit
 #endif
 
 #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class UIKit.UIColor
+    fileprivate import UIKit
 #endif
 
 public protocol ColorVaryingSample<Sample> {

@@ -4,7 +4,7 @@
 //
 
 #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class UIKit.UIColor
+    public import UIKit
 
     extension ExpressibleByColorVaryingSample
     where Self: UIKit.UIColor {

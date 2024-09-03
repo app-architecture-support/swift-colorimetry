@@ -4,9 +4,8 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import class CoreGraphics.CGColor
-    public import class CoreGraphics.CGColorSpace
-    public import struct SwiftUI.Color
+    public import CoreGraphics
+    public import SwiftUI
 
     @available(macOS 14.0, tvOS 17.0, iOS 17.0, watchOS 10.0, *)
     extension SwiftUI.Color.Resolved: ColorSample {

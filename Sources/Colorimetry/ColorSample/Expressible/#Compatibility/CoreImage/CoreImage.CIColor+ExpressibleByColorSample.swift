@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(visionOS)
-    public import class CoreImage.CIColor
+    public import CoreImage
 
     extension ExpressibleByColorSample
     where Self: CoreImage.CIColor {

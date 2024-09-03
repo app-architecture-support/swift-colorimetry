@@ -4,7 +4,7 @@
 //
 
 #if os(tvOS) || os(iOS) || os(visionOS)
-    public import enum UIKit.UIUserInterfaceStyle
+    public import UIKit
 
     extension ColorSampleVariant.Lighting {
 

@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import struct SwiftUI.Color
+    public import SwiftUI
 
     @available(macOS 14.0, tvOS 17.0, iOS 17.0, watchOS 10.0, *)
     extension SwiftUI.Color.Resolved: ExpressibleByColorSample {

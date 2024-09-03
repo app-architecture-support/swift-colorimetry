@@ -4,7 +4,7 @@
 //
 
 #if os(macOS)
-    public import class AppKit.NSColorSpace
+    public import AppKit
 
     extension ExpressibleByColorSpace
     where Self: AppKit.NSColorSpace {

@@ -4,7 +4,7 @@
 //
 
 #if os(macOS) || os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
-    public import struct SwiftUI.EnvironmentValues
+    public import SwiftUI
 
     extension SwiftUI.EnvironmentValues {
 
