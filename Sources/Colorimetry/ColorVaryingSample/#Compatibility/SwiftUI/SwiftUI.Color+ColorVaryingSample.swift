@@ -29,6 +29,20 @@
         }
 
         // MARK: ColorVaryingSample - _Converting
+        
+        #if os(macOS)
+            @_documentation(visibility: internal)
+            public func _converting<Color: AppKit.NSColor>(to _: Color.Type) -> Color {
+                AppKit.NSColor(self)._converting(to: Color.self)
+            }
+        #endif
+
+        #if os(tvOS) || os(iOS) || os(watchOS) || os(visionOS)
+            @_documentation(visibility: internal)
+            public func _converting<Color: UIKit.UIColor>(to _: Color.Type) -> Color {
+                UIKit.UIColor(self)._converting(to: Color.self)
+            }
+        #endif
 
         @_documentation(visibility: internal)
         public func _converting(to _: SwiftUI.Color.Type) -> SwiftUI.Color {
