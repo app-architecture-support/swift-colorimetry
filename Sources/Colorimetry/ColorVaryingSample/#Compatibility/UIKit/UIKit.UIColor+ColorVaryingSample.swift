@@ -26,7 +26,7 @@
                     return sample
                 } else {
                     os.os_log(.error, "unable to create $@ from $@: unable to apply $@", String(reflecting: Sample.self), String(reflecting: Self.self), String(reflecting: SampleVariant.self))
-                    return .init()
+                    return .init(gray: 0, alpha: 0)
                 }
             #elseif os(watchOS)
                 return cgColor

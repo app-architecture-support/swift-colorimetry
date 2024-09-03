@@ -12,11 +12,11 @@
     public import AppKit
 #endif
 
-public protocol ColorSpace {
+public protocol ColorSpace<Component> {
 
     // MARK: ColorSpace - Component
 
-    associatedtype Component: Sendable, Hashable
+    associatedtype Component: Hashable
 
     var componentCount: Int { get }
 

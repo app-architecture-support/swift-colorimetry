@@ -38,7 +38,7 @@ extension OpacitySupportingColorSpace: ColorSpace {
 
     // MARK: ColorSpace - Component
 
-    public enum Component: Sendable, Hashable {
+    public enum Component: Hashable {
 
         // MARK: OpacitySupportingColorSpace.Component
 
@@ -95,4 +95,9 @@ extension OpacitySupportingColorSpace: ColorSpace {
             colorSpace._converting(to: ColorSpace.self)
         }
     #endif
+}
+
+extension OpacitySupportingColorSpace.Component: Sendable
+where ColorSpaceType.Component: Sendable {
+    /* This scope is intentionally left blank. */
 }

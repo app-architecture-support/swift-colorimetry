@@ -46,12 +46,6 @@ extension OpacitySupportingColorSample: CustomDebugStringConvertible {
 
 extension OpacitySupportingColorSample: ColorSample {
 
-    // MARK: ColorSample - Initialization
-
-    public init() {
-        self.init(colorSample: .init())
-    }
-
     // MARK: ColorSample - Space
 
     public typealias Space = OpacitySupportingColorSpace<ColorSampleType.Space>
@@ -79,7 +73,7 @@ extension OpacitySupportingColorSample: ColorSample {
             let opacity = opacity ?? space.defaultIntensityForComponent(.opacity)
             guard let color = colorSample._converting(to: Color.self).copy(alpha: opacity) else {
                 os.os_log(.error, "unable to create %@ from %@: unable to modify opacity", String(reflecting: Color.self), String(reflecting: Self.self))
-                return .init()
+                return .init(gray: 0, alpha: 0)
             }
             return color._converting(to: Color.self)
         }

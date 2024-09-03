@@ -13,11 +13,7 @@
     fileprivate import CoreImage
 #endif
 
-public protocol ColorSample {
-
-    // MARK: ColorSample - Initialization
-
-    init()
+public protocol ColorSample<Space> {
 
     // MARK: ColorSample - Space
 
@@ -61,7 +57,7 @@ extension ColorSample {
             return withUnsafeTemporaryAllocation(of: CoreGraphics.CGFloat.self, capacity: colorSpace.numberOfComponents + 1) { colorComponentListBuffer in
                 guard let colorComponentListBufferAddress = colorComponentListBuffer.baseAddress else {
                     os.os_log(.error, "unable to create %@ from %@: missing color component list", String(reflecting: Color.self), String(reflecting: Self.self))
-                    return .init()
+                    return .init(gray: 0, alpha: 0)
                 }
                 for colorComponentIndex in 0 ..< colorSpace.numberOfComponents {
                     let colorComponent = space.componentForIndex(colorComponentIndex)
@@ -71,7 +67,7 @@ extension ColorSample {
                 let color = Color(colorSpace: colorSpace, components: colorComponentListBufferAddress)
                 guard let color else {
                     os.os_log(.error, "unable to create %@ from %@: incorrect color space or color component list", String(reflecting: Color.self), String(reflecting: Self.self))
-                    return .init()
+                    return .init(gray: 0, alpha: 0)
                 }
                 return color
             }

@@ -22,12 +22,6 @@
             cgColor[component: component]
         }
 
-        // MARK: ColorSample - Initialization
-
-        public init() {
-            self.init(red: 0, green: 0, blue: 0)
-        }
-
         // MARK: ColorSample - _Converting
 
         @_documentation(visibility: internal)

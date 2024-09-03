@@ -36,6 +36,7 @@
             }
             return components[componentIndex]
         }
+    
         // MARK: ColorSample - _Converting
 
         @_documentation(visibility: internal)

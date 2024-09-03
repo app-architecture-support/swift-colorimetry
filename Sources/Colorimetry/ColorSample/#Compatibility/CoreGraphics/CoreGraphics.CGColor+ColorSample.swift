@@ -7,16 +7,6 @@
     public import CoreGraphics
     fileprivate import os
 
-    extension ColorSample
-    where Self: CoreGraphics.CGColor {
-
-        // MARK: ColorSample - Initialization
-
-        public init() {
-            self.init(gray: 0, alpha: 0)
-        }
-    }
-
     extension CoreGraphics.CGColor: ColorSample {
 
         // MARK: ColorSample - Space
@@ -50,16 +40,16 @@
             }
             guard let colorSpace else {
                 os.os_log(.error, "unable to create %@ from %@: missing color space", String(reflecting: Color.self), String(reflecting: Self.self))
-                return .init()
+                return .init(gray: 0, alpha: 0)
             }
             guard let colorComponentList = components else {
                 os.os_log(.error, "unable to create %@ from %@: missing color component list", String(reflecting: Color.self), String(reflecting: Self.self))
-                return .init()
+                return .init(gray: 0, alpha: 0)
             }
             return colorComponentList.withUnsafeBufferPointer { colorComponentListBuffer in
                 guard let colorComponentListBufferAddress = colorComponentListBuffer.baseAddress else {
                     os.os_log(.error, "unable to create %@ from %@: missing color component list", String(reflecting: Color.self), String(reflecting: Self.self))
-                    return .init()
+                    return .init(gray: 0, alpha: 0)
                 }
                 let color = if let pattern {
                     Color(patternSpace: colorSpace, pattern: pattern, components: colorComponentListBufferAddress)
@@ -68,7 +58,7 @@
                 }
                 guard let color else {
                     os.os_log(.error, "unable to create %@ from %@: incorrect color space, color pattern, or color component list", String(reflecting: Color.self), String(reflecting: Self.self))
-                    return .init()
+                    return .init(gray: 0, alpha: 0)
                 }
                 return color
             }
